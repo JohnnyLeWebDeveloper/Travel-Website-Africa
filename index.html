@@ -1,0 +1,585 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatble" content="ie=edge" />
+    <title>Travel Website Africa</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- JAVASCRIPTS -->
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-migrate-3.0.0.min.js"></script>
+    <!-- JQUERY CYCLE -->
+    <script type="text/javascript" src="js/jquery.cycle2.js"></script>
+    <!-- FOR AJAX FORM -->
+    <script type="text/javascript" src="js/jquery.form.js"></script>
+    <!-- FOR DATE AND OTHER UI -->
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <link href="js/jquery-ui.min.css" rel="stylesheet" type="text/css">
+    <!-- IDANGEROUS SWIPER VERSION 4 -->
+    <script type="text/javascript" src="js/swiper.min.js"></script>
+    <link href="js/swiper.min.css" rel="stylesheet" type="text/css">
+    <!-- FANCY BOX VERSION 3 -->
+    <script type="text/javascript" src="js/fancybox/dist/jquery.fancybox.js"></script>
+    <link href="js/fancybox/dist/jquery.fancybox.css" rel="stylesheet" type="text/css">
+    <!-- GREENSOCK -->
+    <script src="js/gsap/TweenMax.min.js"></script>
+    <!-- SCROLL MAGIC -->
+    <script type="text/javascript" src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="js/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <!-- CUSTOM JAVASCRIPT FILE -->
+    <script type="text/javascript" src="js/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="slick/slick.css" />
+    <link rel="stylesheet" href="slick/slick-theme.css" />
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<script>
+// init controller
+var controller = new ScrollMagic.Controller();
+</script>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-white navbar-light">
+        <div class="container">
+            <a href="#" class="navbar-brand"><img src="images/logo.png" class="img-fluid" alt="" /></a>
+            <button class="navbar-toggler" data-target="#responsive-bar" data-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="responsive-bar">
+                <ul class="navbar-nav text-center ml-auto">
+                    <li class="nav-item"><a href="#" class="nav-link"><img src="images/plane_icon.png" alt="" /><br/><span>Plane Tickets</span> </a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><img src="images/globe.png" alt="" /> <br/> <span>Travel</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"> <img src="images/car.png" class="car" alt="" /> <br/> <span>Rent Car</span></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link"><img src="images/cup.png" alt="" /><br/><span>Hotels</span></a></li>
+                    <li class="language"><a href="#" class="nav-link">EN</a></li>
+                    <li class="search"><a href="#" class="nav-link"><img src="images/search_bar.png" alt="" /></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="text_slider">
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-md-6 left">
+                                <h4>Experience</h4>
+                                <h1>American <br/> Holiday</h1>
+                                <p>America has been growing as a tourist destination, and as it becomes more and more accustomed to receiving so many visitors, its hospitality just gets better.</p>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-3 right_section">
+                                <div class="custom">
+                                    <ul class="customTit">
+                                        <li class="customTab customHover"><img src="images/plane_icon.png" alt="" /></li>
+                                        <li class="customTab"><img src="images/cup.png" alt="" /></li>
+                                        <li class="customTab"><img src="images/car.png" alt="" /></li>
+                                    </ul>
+                                    <ul class="customCon">
+                                        <li class="customList">
+                                            <div class="top">
+                                                <h4>Starting At</h4>
+                                                <h1><span>&#8364;</span>210</h1>
+                                            </div>
+                                            <div class="bottom">
+                                                <h3>Check Out Offer</h3>
+                                            </div>
+                                        </li>
+                                        <li class="customList">
+                                            <div class="top">
+                                                <h4>Starting At</h4>
+                                                <h1><span>&#8364;</span>410</h1>
+                                            </div>
+                                            <div class="bottom">
+                                                <h3>Check Out Offer</h3>
+                                            </div>
+                                        </li>
+                                        <li class="customList">
+                                            <div class="top">
+                                                <h4>Starting At</h4>
+                                                <h1><span>&#8364;</span>310</h1>
+                                            </div>
+                                            <div class="bottom">
+                                                <h3>Check Out Offer</h3>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 left">
+                                <h4>Experience</h4>
+                                <h1>American <br/> Holiday</h1>
+                                <p>America has been growing as a tourist destination, and as it becomes more and more accustomed to receiving so many visitors, its hospitality just gets better.</p>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-3 right_section">
+                                <div class="custom">
+                                    <ul class="customTit">
+                                        <li class="customTab customHover"><img src="images/plane_icon.png" alt="" /></li>
+                                        <li class="customTab"><img src="images/cup.png" alt="" /></li>
+                                        <li class="customTab"><img src="images/car.png" alt="" /></li>
+                                    </ul>
+                                    <ul class="customCon">
+                                        <li class="customList">
+                                            <div class="top">
+                                                <h4>Starting At</h4>
+                                                <h1><span>&#8364;</span>210</h1>
+                                            </div>
+                                            <div class="bottom">
+                                                <h3>Check Out Offer</h3>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row">
+                            <div class="col-md-6 left">
+                                <h4>Experience</h4>
+                                <h1>American <br/> Holiday</h1>
+                                <p>America has been growing as a tourist destination, and as it becomes more and more accustomed to receiving so many visitors, its hospitality just gets better.</p>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                            <div class="col-md-3 right_section">
+                                <div class="custom">
+                                    <ul class="customTit">
+                                        <li class="customTab customHover"><img src="images/plane_icon.png" alt="" /></li>
+                                        <li class="customTab"><img src="images/cup.png" alt="" /></li>
+                                        <li class="customTab"><img src="images/car.png" alt="" /></li>
+                                    </ul>
+                                    <ul class="customCon">
+                                        <li class="customList">
+                                            <div class="top">
+                                                <h4>Starting At</h4>
+                                                <h1><span>&#8364;</span>210</h1>
+                                            </div>
+                                            <div class="bottom">
+                                                <h3>Check Out Offer</h3>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="personally">
+        <div class="container">
+            <div class="row top">
+                <div id="personally_one" class="col-md-6">
+                    <h1>Personally</h1>
+                    <h4>tailored experiences</h4>
+                </div>
+                <div id="personally_two" class="col-md-6">
+                    <p>From the breathtaking national parks in the Western U.S. to the charming Southern towns and historic cities in the East, TRAVELY offers escorted tours throughout Canada and the United States.</p>
+                </div>
+            </div>
+            <div class="row personally_gallery">
+                <div id="single_item_one" class="col-md-4 single_item col-sm-6">
+                    <img src="images/Travel005.jpg" class="img-fluid" alt="" />
+                    <div class="content">
+                        <h5>Startin At</h5>
+                        <h1><span>&#8364;</span> 399</h1>
+                    </div>
+                </div>
+                <div id="single_item_two" class="col-md-4 single_item col-sm-6">
+                    <img src="images/Travel002.jpg" class="img-fluid" alt="" />
+                    <div class="content">
+                        <h5>Startin At</h5>
+                        <h1><span>&#8364;</span> 259</h1>
+                    </div>
+                </div>
+                <div id="single_item_three" class="col-md-4 single_item col-sm-6">
+                    <img src="images/Travel003.jpg" class="img-fluid" alt="" />
+                    <div class="content">
+                        <h5>Startin At</h5>
+                        <h1><span>&#8364;</span> 920</h1>
+                    </div>
+                </div>
+                <div id="single_item_four" class="col-md-4 single_item col-sm-6">
+                    <img src="images/Travel003.jpg" class="img-fluid" alt="" />
+                    <div class="content">
+                        <h5>Startin At</h5>
+                        <h1><span>&#8364;</span> 210</h1>
+                    </div>
+                </div>
+                <div id="single_item_five" class="col-md-4 single_item col-sm-6">
+                    <img src="images/Travel003.jpg" class="img-fluid" alt="" />
+                    <div class="content">
+                        <h5>Startin At</h5>
+                        <h1><span>&#8364;</span> 399</h1>
+                    </div>
+                </div>
+                <div id="single_item_six" class="col-md-4 single_item col-sm-6">
+                    <img src="images/Travel003.jpg" class="img-fluid" alt="" />
+                    <div class="content">
+                        <h5>Startin At</h5>
+                        <h1><span>&#8364;</span> 359</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="personally_button text-center">
+                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> View All</a>
+            </div>
+        </div>
+    </section>
+    <section class="african_safari">
+        <div class="container">
+            <div class="container_inner">
+                <div id="safari_top" class="top">
+                    <h6>Best Offer</h6>
+                    <h5>Experience</h5>
+                    <h1>African Safari</h1>
+                    <p>Africa has been growing as a tourist destination, and as it becomes more and more accustomed to receiving so many visitors, its hospitality just gets better.</p>
+                </div>
+                <div class="kenya">
+                    <div class="row">
+                        <div class="col-sm-3 left">
+                            <h6>Starting At</h6>
+                            <h1><span>&#8364;</span> 210</h1>
+                        </div>
+                        <div class="col-sm-9 right">
+                            <h3>KENYA</h3>
+                            <p>A fantastic 4-day Camping Safari to Kenya's Premier Reserve - <span>The Masai Mara.</span></p>
+                            <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Find Out More</a>
+                        </div>
+                    </div>
+                    <img src="images/wild_people.png" alt="" class="img-fluid wild_people" />
+                </div>
+            </div>
+            <div class="view_all text-center">
+                <a href="#" class="all"><i class="fa fa-play" aria-hidden="true"></i> View All</a>
+            </div>
+            <div class="pre_next_button">
+                <ul>
+                    <li class="pre"><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="north_american_tour">
+        <div class="container">
+            <div class="container_inner">
+                <div class="top">
+                    <h5>Open Road</h5>
+                    <h1>North American <br/> Cities Tour</h1>
+                    <p>America has been growing as a tourist destination, and as it becomes more and more accustomed to receiving so many visitors, its hospitality just gets better.</p>
+                </div>
+                <div class="row american_gallery">
+                    <div class="col-md-4 single_item col-sm-6">
+                        <img src="images/City001.jpg" class="img-fluid" alt="" />
+                        <div class="content">
+                            <h5>Startin At</h5>
+                            <h1><span>&#8364;</span> 399</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4 single_item col-sm-6">
+                        <img src="images/City001.jpg" class="img-fluid" alt="" />
+                        <div class="content">
+                            <h5>Startin At</h5>
+                            <h1><span>&#8364;</span> 259</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4 single_item col-sm-6">
+                        <img src="images/City001.jpg" class="img-fluid" alt="" />
+                        <div class="content">
+                            <h5>Startin At</h5>
+                            <h1><span>&#8364;</span> 920</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4 single_item col-sm-6">
+                        <img src="images/City001.jpg" class="img-fluid" alt="" />
+                        <div class="content">
+                            <h5>Startin At</h5>
+                            <h1><span>&#8364;</span> 399</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4 single_item col-sm-6">
+                        <img src="images/City001.jpg" class="img-fluid" alt="" />
+                        <div class="content">
+                            <h5>Startin At</h5>
+                            <h1><span>&#8364;</span> 259</h1>
+                        </div>
+                    </div>
+                    <div class="col-md-4 single_item col-sm-6">
+                        <img src="images/City001.jpg" class="img-fluid" alt="" />
+                        <div class="content">
+                            <h5>Startin At</h5>
+                            <h1><span>&#8364;</span> 920</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="american_gallery_button text-center">
+                    <a href="#"><i class="fa fa-play" aria-hidden="true"></i> View All</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="long_journey">
+        <div class="container">
+            <div class="top">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="content">
+                            <h1>Long Journey's</h1>
+                            <h6>Today</h6>
+                            <h5>34,098</h5>
+                            <h6><span>departures</span></h6>
+                            <img src="images/rectangle.png" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="row">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="row">
+                            <div class="col-sm-8 right">
+                                <h4>Taiwan</h4>
+                                <p>It is a modern cosmopolitan metropolis with a lively and diversified face, filled with exuberance.</p>
+                                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Find Out More</a>
+                            </div>
+                            <div class="col-sm-4 left">
+                                <div class="icon">
+                                    <img src="images/plane_icon.png" alt="" />
+                                    <h5>Starting At</h5>
+                                    <h1><span>&#8364;</span> 359</h1>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bottom_menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="navigation">
+                        <ul class="nav nav-dark  flex-sm-row ml-auto">
+                            <li class="nav-item dropup"><a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">Last Minute</a>
+                                <div class="dropdown-menu mt-2">
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Skiing</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Mediterranean</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Europa</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Long journey’s</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup"><a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">Cruises</a>
+                                <div class="dropdown-menu mt-2">
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Skiing</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Mediterranean</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Europa</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Long journey’s</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropup"><a href="#" class="nav-link  dropdown-toggle" data-toggle="dropdown">WelLness</a>
+                                <div class="dropdown-menu mt-2">
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Skiing</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Mediterranean</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Europa</a>
+                                    <a href="#" class="dropdown-item"><i class="fa fa-play" aria-hidden="true"></i> Long journey’s</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="check_all_others text-right">
+                        <div class="row">
+                            <div class="col-6 check_all">
+                                <a href="#"><i class="fa fa-play" aria-hidden="true"></i> Check It All</a>
+                            </div>
+                            <div class="col-6">
+                                <div class="pre_next_button">
+                                    <ul>
+                                        <li class="pre"><a href="#"><i class="fa fa-caret-left" aria-hidden="true"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="newsletter">
+        <div class="container">
+            <h6>Newsletter</h6>
+            <h1>Find Out First</h1>
+            <h3>About The Best Offers</h3>
+            <form action="">
+                <div class="form-row text-center">
+                    <div class="col-11">
+                        <input type="email" placeholder="Your E Mail" class="form-control" />
+                    </div>
+                    <div class="col-1">
+                        <button type="submit"><i class="fa fa-play" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </form>
+            <p>Sign Up to get best offers on plane tickets, hotel bookings, rent a car and much more.</p>
+        </div>
+    </section>
+    <section class="multi_column_slider">
+        <div class="container">
+            <section class="multi-slider">
+                <div>
+                    <img src="images/business_partner_1.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_2.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_3.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_4.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_5.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_6.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_1.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_2.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_3.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_4.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_5.png" alt="" />
+                </div>
+                <div>
+                    <img src="images/business_partner_6.png" alt="" />
+                </div>
+            </section>
+        </div>
+    </section>
+    <div class="scroll-to-top">
+        <div class="scrolltop">
+            <i class="fa fa-arrow-circle-up" aria-hidden="true"></i>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container text-center">
+            <div class="social_icon">
+                <ul>
+                    <li><a href="#"><img src="images/facebook_icon.png" alt="" /></a></li>
+                    <li><a href="#"><img src="images/pinterest_icon.png" alt="" /></a></li>
+                    <li><a href="#"><img src="images/twitter_icon.png" alt="" /></a></li>
+                </ul>
+            </div>
+            <div class="copyright">
+                <p>&copy; TRAVELY 2018 - All rights reserved</p>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="js/Ublue-jQueryTabs-1.2.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+    $(function() {
+        $(".tabs").UblueTabs();
+
+        $(".custom").UblueTabs({
+            tabsTit: ".customTit",
+            tabsTab: ".customTab",
+            tabsCon: ".customCon",
+            tabsList: ".customList",
+            tabsHover: "customHover",
+            eventType: "click"
+        });
+    });
+
+
+
+
+
+    // For Slick Slider
+    $('.multi-slider').slick({
+        autoplay: true,
+        dots: false,
+        arrows: false,
+        pauseOnHover: true,
+        speed: 500,
+        slidesToShow: 6,
+        slidesToScroll: 2,
+        responsive: [{
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 575,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    // For Scroll To Top
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 300) {
+            $('.scrolltop').fadeIn();
+        } else {
+            $('.scrolltop').fadeOut();
+        }
+    });
+    // For Active To Top Button
+    $('.scrolltop').click(function() {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 600);
+        return false;
+    });
+    </script>
+</body>
+
+</html>

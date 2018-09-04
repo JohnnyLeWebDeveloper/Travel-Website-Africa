@@ -1,0 +1,1782 @@
+/* ------------------------- RESET CSS -------------------------- */
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    line-height: normal;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    clear: both;
+    font-weight: normal;
+}
+
+blockquote {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after {
+    content: '';
+    content: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+
+/* tables still need 'cellspacing="0"' in the markup */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a img {
+    border: none;
+}
+
+div,
+input,
+p,
+textarea {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {
+    outline: none;
+    /* REMOVES ANY ON FOCUS ON DIVS */
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
+/* ------------------------- HELPER CLASSES -------------------------- */
+
+.flexCenter {
+    display: -webkit-box;
+    /* OLD - iOS 6-, Safari 3.1-6 */
+    display: -moz-box;
+    /* OLD - Firefox 19- (buggy but mostly works) */
+    display: -ms-flexbox;
+    /* TWEENER - IE 10 */
+    display: -webkit-flex;
+    /* NEW - Chrome */
+    display: flex;
+    -ms-flex-pack: center;
+    -webkit-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    -webkit-flex-align: center;
+    align-items: center;
+}
+
+.flexColumn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.rel {
+  position: relative;
+}
+
+.clear {
+  clear: both;
+}
+
+.bgImage{
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: top center;
+}
+
+.placement {
+    position: relative;
+    width: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    height: 100%;
+}
+
+.imageAbove {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+
+/* ------------------------- CSS -------------------------- */
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/*------------------------------------
+-------- NAVIGATION --------
+-------------------------------------*/
+
+.navbar {
+    padding: 0px 0px;
+}
+
+.navbar .navbar-nav {
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar .nav-item {
+    margin: 0px 5px;
+}
+
+.navbar .nav-item .nav-link {
+    background: #FFFFFF;
+    display: block;
+    padding: 10px 20px;
+    position: relative;
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.navbar .nav-item .nav-link:before {
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 12px;
+    background: #FD5C08;
+    left: 0px;
+    bottom: -6px;
+    transform: skewY(7deg);
+    display: none;
+}
+
+.navbar .nav-item .nav-link:after {
+    content: "";
+    position: absolute;
+    width: 52%;
+    height: 12px;
+    background: #FD5C08;
+    right: 0px;
+    bottom: -6px;
+    transform: skewY(-7deg);
+    display: none;
+}
+
+.navbar .nav-item:hover .nav-link:before,
+.navbar .nav-item:hover .nav-link:after,
+.navbar .nav-item.active .nav-link:before,
+.navbar .nav-item.active .nav-link:after {
+    display: block;
+}
+
+
+.navbar .language .nav-link,
+.navbar .search .nav-link {
+    padding-top: 25px;
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0px 5px;
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item.active .nav-link {
+    color: #FFFFFF !important;
+    background: #FD5C08;
+}
+
+.navbar .nav-item span {
+    display: block;
+    height: 20px;
+}
+
+.navbar .nav-item .nav-link .car {
+    margin-bottom: 10px;
+}
+
+/*------------------------------------
+-------- CONTAINER --------
+-------------------------------------*/
+
+@media (max-width: 575.98px) {
+    .container {
+        width: 95%;
+    }
+    .navbar {
+        padding: 15px 0px;
+    }
+    .navbar .nav-item {
+        width: 200px;
+        margin: 5px auto;
+    }
+    .navbar .nav-item:hover .nav-link:before,
+    .navbar .nav-item:hover .nav-link:after,
+    .navbar .nav-item.active .nav-link:before,
+    .navbar .nav-item.active .nav-link:after {
+        display: none;
+    }
+    .navbar-light .navbar-toggler {
+        border-color: #FD5C08 !important;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        padding: 15px 0px;
+    }
+    .navbar .nav-item {
+        width: 200px;
+        margin: 5px auto;
+    }
+    .navbar .nav-item:hover .nav-link:before,
+    .navbar .nav-item:hover .nav-link:after,
+    .navbar .nav-item.active .nav-link:before,
+    .navbar .nav-item.active .nav-link:after {
+        display: none;
+    }
+
+    .navbar-light .navbar-toggler {
+        border-color: #FD5C08 !important;
+    }
+}
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .navbar .nav-item .nav-link {
+        padding: 10px 5px;
+    }
+}
+
+
+/*------------------------------------
+-------- TEXT SLIDER --------
+-------------------------------------*/
+
+.text_slider {
+    background: url(images/slider_bg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 250px;
+    padding-bottom: 100px;
+}
+
+.text_slider .left h4 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.text_slider .left h1 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 90px;
+    text-transform: uppercase;
+    line-height: 80px;
+    margin: 20px 0px;
+}
+
+.text_slider .left p {
+    color: #FFFFFF;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.carousel-indicators li {
+    width: 12px;
+    height: 12px;
+    background: #FFFFFF;
+    border-radius: 50%;
+    margin: 0px 10px;
+    bottom: -40px;
+}
+
+.carousel-indicators li.active {
+    background: #FD5C08;
+}
+
+
+.tabs {
+    margin: 40px auto;
+    border: 3px solid #333;
+}
+
+.tabsTit,
+.tabsCon {
+    overflow: hidden;
+}
+
+.tabsTit {
+    text-align: center;
+    color: #B3AAB4;
+}
+
+.tabsTit li {
+    float: left;
+    line-height: 28px;
+    cursor: pointer;
+    background: #262626;
+    border-bottom: 2px solid #666666;
+}
+
+.tabsTit .tabsHover {
+    background: #1E1E1E;
+    border-bottom: 2px solid #A11E22;
+}
+
+.tabsCon {
+    background: black;
+    color: #B3AAB4;
+}
+
+.tabsCon li {
+    padding: 10px;
+}
+
+
+/*------------------------------------
+-------- CUSTOM --------
+-------------------------------------*/
+
+.custom {
+    width: 255px;
+    margin: 40px auto;
+}
+
+.customTit,
+.customCon {
+    overflow: hidden;
+}
+
+.customTit {
+    text-align: center;
+    color: #B3AAB4;
+}
+
+.customTit li {
+    float: left;
+    line-height: 30px;
+    cursor: pointer;
+    background: #3F3E41;
+    color: #FFF;
+    padding: 15px 30px;
+    list-style: none;
+}
+
+.customTit .customHover {
+    background: #FD5C08;
+}
+
+.customCon {
+    background: #1D2130;
+    color: #B3AAB4;
+}
+
+.text_slider .right_section .top {
+    background: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.text_slider .right_section .top h4 {
+    color: #3F3E41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.text_slider .right_section .top h1 {
+    color: #fd5c08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.text_slider .right_section .top h1 span {
+    color: #3F3E41;
+    font-size: 40px;
+    margin-right: 10px;
+}
+
+.text_slider .right_section .bottom {
+    background: #3F3E41;
+    padding: 20px 30px;
+    box-sizing: border-box;
+}
+
+.text_slider .right_section .bottom h3 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    background: url(images/check_mark.png) no-repeat;
+    background-position: left center;
+    padding-left: 25px;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+
+@media (max-width: 575.98px) {
+    .text_slider {
+        padding-top: 100px;
+    }
+    .text_slider .left h1 {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .text_slider {
+        padding-top: 100px;
+    }
+    .text_slider .left h1 {
+        font-size: 70px;
+    }
+}
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .text_slider {
+        padding-top: 150px;
+    }
+    .customTit li {
+        padding: 10px 13px;
+    }
+    .text_slider .left h1 {
+        font-size: 70px;
+    }
+    .text_slider .right_section .top h1 {
+        font-size: 50px;
+    }
+    .text_slider .right_section .bottom {
+        padding: 15px 10px;
+    }
+    .text_slider .right_section .bottom h3 {
+        font-size: 12px;
+    }
+}
+
+
+/*	Large devices (desktops, 992px and up)	*/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .customTit li {
+        padding: 15px 23px;
+    }
+}
+
+
+
+
+/*------------------------------------
+-------- PERSONALLY SECTION --------
+-------------------------------------*/
+
+.personally {
+    background: url(images/world_map.png) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 40px 0px;
+}
+
+.personally .top {
+    margin-bottom: 80px;
+}
+
+.personally .top h1 {
+    color: #fd5c08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    line-height: 60px;
+}
+
+.personally .top h4 {
+    color: #3f3e41;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.personally .top p {
+    color: #3f3e41;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.personally_gallery .single_item {
+    position: relative;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+.personally_gallery .content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.personally_gallery .content h5 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.personally_gallery .content h1 {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.personally_gallery .content h1 span {
+    color: #fd5c08;
+    font-size: 24px;
+}
+
+.personally .personally_button a {
+    text-decoration: none;
+    color: #FFF;
+    background: #545357;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    padding: 7px 20px;
+    margin-top: 30px;
+}
+
+.personally .personally_button a i {
+    color: #FD5C08;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+
+@media (max-width: 575.98px) {
+    .personally .top h1 {
+        font-size: 45px;
+    }
+    .personally .top h4 {
+        font-size: 22px;
+    }
+    .personally .top {
+        margin-bottom: 40px;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .personally .top h1 {
+        font-size: 60px;
+    }
+    .personally .top {
+        margin-bottom: 40px;
+    }
+}
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .personally .top h1 {
+        font-size: 50px;
+    }
+    .personally .top h4 {
+        font-size: 24px;
+    }
+    .personally .top {
+        margin-bottom: 40px;
+    }
+}
+
+
+/*------------------------------------
+-------- SAFARI SECTION --------
+-------------------------------------*/
+
+.african_safari {
+    background: url(images/zebra.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 60px 0px;
+}
+
+.african_safari .container_inner {
+    max-width: 860px;
+    margin: 0px auto;
+}
+
+.african_safari .container .top {
+    margin-bottom: 60px;
+}
+
+.african_safari .container .top h6 {
+    color: #FFF;
+    font-family: 'Kaushan Script', cursive;
+    font-weight: 700;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.african_safari .container .top h5 {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.african_safari .container .top h1 {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 80px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.african_safari .container .top p {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+}
+
+.african_safari .container .kenya {
+    max-width: 660px;
+    margin: 0px auto;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.african_safari .container .kenya img {
+    position: absolute;
+    right: -200px;
+    top: -60px;
+    z-index: 1;
+}
+
+.african_safari .container .kenya .left {
+    background: #3F3E41;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.african_safari .container .kenya .left h6 {
+    color: #FFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.african_safari .container .kenya .left h1 {
+    color: #FD5C08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+}
+
+.african_safari .container .kenya .left h1 span {
+    color: #FFF;
+    font-size: 40px;
+}
+
+.african_safari .container .kenya .right {
+    background: #FFF;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.african_safari .container .kenya h3 {
+    color: #FD5C08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    text-transform: uppercase;
+}
+
+.african_safari .container .kenya p {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.african_safari .container .kenya p span {
+    font-weight: 700;
+}
+
+.african_safari .container .kenya .right a {
+    text-decoration: none;
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.african_safari .container .kenya .right a i {
+    color: #FD5C08;
+    margin-right: 5px;
+}
+
+.african_safari .container .all {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #545357;
+    display: inline-block;
+    padding: 7px 20px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.african_safari .container .all i {
+    color: #FD5C08;
+    margin-right: 5px;
+}
+
+.african_safari .container {
+    overflow: hidden;
+}
+
+.african_safari .container .pre_next_button {
+    float: right;
+}
+
+.african_safari .container .pre_next_button ul {
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
+
+.african_safari .container .pre_next_button ul li {
+    display: inline-block;
+    list-style: none;
+}
+
+.african_safari .container .pre_next_button ul li a {
+    background: #FD5C08;
+    display: block;
+    padding: 15px 25px;
+    color: #FFFFFF;
+}
+
+.african_safari .container .pre_next_button ul li.pre a {
+    background: #3F3E41;
+    margin-right: -5px;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+
+@media (max-width: 575.98px) {
+    .african_safari .container .top h1 {
+        font-size: 60px;
+    }
+    .african_safari .container .kenya .left h1 {
+        font-size: 36px;
+    }
+    .african_safari .container .kenya .left h1 span {
+        font-size: 24px;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .african_safari .container .top h1 {
+        font-size: 60px;
+    }
+    .african_safari .container .kenya .left h1 {
+        font-size: 36px;
+    }
+    .african_safari .container .kenya .left h1 span {
+        font-size: 24px;
+    }
+}
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .african_safari .container .kenya img {
+        right: -145px;
+        top: -55px;
+    }
+}
+
+
+/*------------------------------------
+-------- NORTH AMERICAN TOUR --------
+-------------------------------------*/
+
+.north_american_tour {
+    background: url(images/statue.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 40px 0px;
+    margin-top: 60px;
+}
+
+.north_american_tour .top {
+    margin-bottom: 80px;
+}
+
+.north_american_tour .top h1 {
+    color: #3F3E41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 85px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    line-height: 80px;
+}
+
+.north_american_tour .top h5 {
+    color: #FD5C08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.north_american_tour .top p {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    max-width: 650px;
+    margin-top: 20px;
+}
+
+.north_american_tour .single_item {
+    position: relative;
+    margin: 0px;
+    margin-bottom: 25px;
+}
+
+.north_american_tour .single_item img {
+    width: 100%;
+    height: 100%;
+}
+
+.north_american_tour .content {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+
+.north_american_tour .content h5 {
+    color: #fff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.north_american_tour .content h1 {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.north_american_tour .content h1 span {
+    color: #fd5c08;
+    font-size: 24px;
+}
+
+.north_american_tour .american_gallery_button a {
+    text-decoration: none;
+    color: #FFFFFF;
+    background: #545357;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    display: inline-block;
+    padding: 7px 20px;
+    margin-top: 30px;
+}
+
+.north_american_tour .american_gallery_button a i {
+    color: #FD5C08;
+}
+
+.north_american_tour .american_gallery h5 {
+    text-align: center;
+}
+
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+
+@media (max-width: 575.98px) {
+    .north_american_tour .top h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .north_american_tour .top {
+        margin-bottom: 40px;
+    }
+    .long_journey .top .content {
+        width: 260px;
+        margin-bottom: 20px;
+    }
+    .check_all_others .check_all a {
+        font-size: 12px;
+    }
+    .check_all_others .pre_next_button ul li a {
+        padding: 10px 20px;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .north_american_tour .top h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .north_american_tour .top {
+        margin-bottom: 40px;
+    }
+    .long_journey .top .content {
+        width: 260px;
+        margin-bottom: 20px;
+    }
+    .check_all_others .check_all a {
+        font-size: 12px;
+    }
+    .check_all_others .pre_next_button ul li a {
+        padding: 10px 20px;
+    }
+}
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .north_american_tour .top h1 {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .north_american_tour .top {
+        margin-bottom: 40px;
+    }
+}
+
+
+
+
+/*------------------------------------
+-------- LONG JOURNEY --------
+-------------------------------------*/
+
+.long_journey {
+    background: url(images/long_journey_bg.jpg) no-repeat;
+    background-position: center center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.long_journey .top {}
+
+.long_journey .top .content {
+    padding: 30px;
+    background: #FD5C08;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 999;
+}
+
+.long_journey .top .content img {
+    position: relative;
+    bottom: -47px;
+    left: -35px;
+    width: 260px;
+}
+
+.long_journey .top .content h1 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.long_journey .top .content h6 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.long_journey .top .content h6 span {
+    font-weight: 300;
+    text-transform: lowercase;
+}
+
+.long_journey .top .content h5 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+/*------------------------------------
+-------- LONG JOURNEY BOTTOM --------
+-------------------------------------*/
+
+.long_journey .container .bottom {
+
+    margin: 0px auto;
+    padding: 20px 0px;
+    position: relative;
+}
+
+.long_journey .container .bottom .left {
+    background: #3F3E41;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.long_journey .container .bottom .right h4 {
+    color: #FD5C08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.long_journey .container .bottom .right p {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+.long_journey .container .bottom .left h1 {
+    color: #FD5C08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 56px;
+}
+
+.long_journey .container .bottom .left h1 span {
+    color: #FFFFFF;
+    font-size: 40px;
+}
+
+.long_journey .container .bottom .right {
+    background: #FFFFFFE6;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.long_journey .container .bottom .left h5 {
+    color: #FFFFFF;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.long_journey .container .bottom p {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.long_journey .container .bottom p span {
+    font-weight: 700;
+}
+
+.long_journey .container .bottom .right a {
+    text-decoration: none;
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.long_journey .container .bottom .right a i {
+    color: #FD5C08;
+    margin-right: 5px;
+}
+
+
+/*------------------------------------
+-------- BOTTOM MENU --------
+-------------------------------------*/
+
+.bottom_menu {
+    background: #EDEDED;
+}
+
+.bottom_menu .navigation {
+    background: #EDEDED !important;
+}
+
+.bottom_menu .navigation .nav .nav-item {
+    text-align: center;
+    padding: 10px 5px;
+}
+
+.bottom_menu .navigation .nav .nav-item .nav-link {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.dropup .dropdown-toggle:after {
+    border-bottom: none;
+}
+
+.bottom_menu .navigation .nav .nav-item.show {
+    background: #FD5C08;
+    position: relative;
+}
+
+.bottom_menu .navigation .nav .nav-item.show:before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 12px;
+    background: #FD5C08;
+    left: 0px;
+    top: -3px;
+    transform: skewY(-10deg);
+    z-index: 999;
+}
+
+.bottom_menu .navigation .nav .nav-item.show:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 12px;
+    background: #FD5C08;
+    right: 0px;
+    top: -3px;
+    transform: skewY(10deg);
+    z-index: 999;
+}
+
+.bottom_menu .navigation .nav .nav-item.show .nav-link {
+    color: #FFF;
+}
+
+.bottom_menu .navigation .nav .dropdown-menu {
+    border: none;
+    border-radius: 0px;
+    top: -5px !important;
+    left: -16px !important;
+    z-index: 99;
+    box-sizing: border-box;
+}
+
+.bottom_menu .navigation .nav .dropdown-menu .dropdown-item {
+    color: #2a2a2a;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 7px 0px;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+.bottom_menu .navigation .nav .dropdown-menu .dropdown-item i {
+    color: #FFFFFF;
+    font-size: 10px;
+}
+
+.bottom_menu .navigation .nav .dropdown-menu .dropdown-item:hover {
+    color: #000000;
+}
+
+.bottom_menu .navigation .nav .dropdown-menu .dropdown-item:hover i {
+    color: #FD5C08;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+
+@media (max-width: 575.98px) {
+    .bottom_menu .navigation .nav .nav-item .nav-link {
+        font-size: 10px;
+        padding: 5px 0px;
+    }
+    .bottom_menu .navigation .nav .nav-item.show:before {
+        width: 52%;
+    }
+    .bottom_menu .navigation .nav .nav-item.show:after {
+        width: 52%;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .bottom_menu .navigation .nav .nav-item .nav-link {
+        font-size: 10px;
+        padding: 5px 0px;
+    }
+    .bottom_menu .navigation .nav .nav-item.show:before {
+        width: 52%;
+    }
+    .bottom_menu .navigation .nav .nav-item.show:after {
+        width: 52%;
+    }
+}
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .long_journey .top .content {
+        width: 260px;
+    }
+    .long_journey .container .bottom .left h5 {
+        font-size: 14px;
+    }
+    .long_journey .container .bottom .left h1 {
+        font-size: 40px;
+    }
+    .long_journey .container .bottom .left h1 span {
+        font-size: 25px;
+    }
+    .bottom_menu .navigation .nav .nav-item {
+        padding: 10px 5px;
+    }
+    .bottom_menu .navigation .nav .nav-item .nav-link {
+        font-size: 10px;
+    }
+    .bottom_menu .navigation .nav .dropdown-menu {
+        left: -35px !important;
+    }
+}
+
+
+/*	Large devices (desktops, 992px and up)	*/
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+    .long_journey .top .content {
+        width: 260px;
+    }
+}
+
+
+/*------------------------------------
+-------- CHECK ALL OTHERS --------
+-------------------------------------*/
+
+.check_all_others .check_all {
+    margin-top: 12px;
+}
+
+.check_all_others .check_all a {
+    text-decoration: none;
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding-top: 20px;
+}
+
+.check_all_others .check_all a i {
+    color: #FD5C08;
+}
+
+.check_all_others .pre_next_button ul {
+    margin-bottom: 0px;
+}
+
+.check_all_others .pre_next_button ul li {
+    display: inline-block;
+    list-style: none;
+    float: left;
+}
+
+.check_all_others .pre_next_button ul li a {
+    background: #FD5C08;
+    display: block;
+    padding: 15px 25px;
+    color: #FFFFFF;
+}
+
+.check_all_others ul li.pre a {
+    background: #3F3E41;
+}
+
+
+/*------------------------------------
+-------- NEWSLETTER --------
+-------------------------------------*/
+
+.newsletter {
+    background: url(images/footer_top_bg.jpg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding: 100px 0px;
+}
+
+.newsletter .container {
+    max-width: 620px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.newsletter .container h6 {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.newsletter .container h1 {
+    color: #FD5C08;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 60px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    line-height: 80px;
+}
+
+.newsletter .container h3 {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.newsletter .container p {
+    color: #3f3e41;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.newsletter .container form {
+    max-width: 280px;
+    margin: 0px auto;
+}
+
+.newsletter .container form .form-control {
+    color: #FFFFFF !important;
+    background: #525052;
+    border: none;
+    border-radius: 0px;
+    height: 40px;
+}
+
+.form-control::placeholder {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.newsletter .container form button {
+    background: #FD5C08;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-left: -10px;
+    padding: 7.5px 15px;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+
+/*								*/
+
+.multi_column_slider {
+    background: #3F3E41;
+    padding: 20px 0px;
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .north_american_tour .top h1 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .north_american_tour .top {
+        margin-bottom: 40px;
+    }
+    .long_journey .top .content {
+        width: 260px;
+        margin-bottom: 20px;
+    }
+    .check_all_others .check_all a {
+        font-size: 12px;
+    }
+    .check_all_others .pre_next_button ul li a {
+        padding: 10px 20px;
+    }
+}
+
+
+/*------------------------------------
+-------- FOOTER --------
+-------------------------------------*/
+
+.footer {
+    background: #FD5C08;
+    padding: 30px 0px;
+}
+
+.footer .social_icon ul {
+    margin-bottom: 0px;
+}
+
+.footer .social_icon ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+.footer .copyright {
+    margin-top: 30px;
+}
+
+.footer .copyright p {
+    color: #FFF !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.footer .logo_part {
+    text-align: right;
+}
+
+.footer .logo_part img {
+    margin-top: 35px;
+}
+
+.footer .logo_part p {
+    color: #FFF !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 10px;
+    text-transform: uppercase;
+    margin: 15px 0px;
+}
+
+.footer .logo_part h6 {
+    color: #FFF !important;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+.footer .logo_part h6 span {
+    font-weight: 700;
+}
+
+
+/*									*/
+
+.scrolltop i {
+    color: #FFF;
+    background: #FD5C0899;
+    border: 1px solid #FFF;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    position: fixed;
+    bottom: 3%;
+    right: 4%;
+}
+
+.scrolltop i:hover {
+    -webkit-box-shadow: 0px 1px 5px #FD5B06, 0px -1px 5px #FD5B06, 1px 0px 5px #FD5B06, -1px 0px 5px #FD5B06;
+    -moz-box-shadow: 0px 1px 5px #FD5B06, 0px -1px 5px #FD5B06, 1px 0px 5px #FD5B06, -1px 0px 5px #FD5B06;
+    box-shadow: 0px 1px 5px #FD5B06, 0px -1px 5px #FD5B06, 1px 0px 5px #FD5B06, -1px 0px 5px #FD5B06;
+}
+
+
+/*	Extra small devices (portrait phones, less than 576px)	*/
+
+@media (max-width: 575.98px) {
+
+    .footer {
+        text-align: center;
+    }
+    .footer .copyright {
+        margin-bottom: 20px;
+    }
+    .footer .logo_part {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .newsletter .container h1 {
+        font-size: 32px;
+        line-height: 30px;
+    }
+    .newsletter {
+        padding: 30px 0px;
+    }
+    .scrolltop i {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .footer .logo_part img {
+        margin-top: 0px;
+    }
+    .personally_gallery .single_item {
+        max-width: 400px;
+        margin: 10px auto;
+    }
+    .north_american_tour .single_item {
+        max-width: 400px;
+        margin: 10px auto;
+    }
+}
+
+
+/*	Small devices (landscape phones, 576px and up)	*/
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+    .footer {
+        text-align: center;
+    }
+    .footer .copyright {
+        margin-bottom: 20px;
+    }
+    .footer .logo_part {
+        text-align: center;
+        margin-top: 10px;
+    }
+    .scrolltop i {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    .footer .logo_part img {
+        margin-top: 0px;
+    }
+}
+
+
+
+/*	Medium devices (tablets, 768px and up)	*/
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .footer .social_icon ul li {
+        margin: 0px 5px;
+    }
+    .scrolltop i {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
+}
